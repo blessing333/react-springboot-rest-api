@@ -3,11 +3,12 @@ package com.blessing333.gccoffee.domain.service;
 import com.blessing333.gccoffee.domain.Category;
 import com.blessing333.gccoffee.domain.Product;
 import com.blessing333.gccoffee.domain.repository.ProductRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
-
+@Service
 public class DefaultProductService implements ProductService{
     private final ProductRepository productRepository;
 
