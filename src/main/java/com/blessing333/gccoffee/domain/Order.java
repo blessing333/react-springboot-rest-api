@@ -2,6 +2,7 @@ package com.blessing333.gccoffee.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.UUID;
 
 @AllArgsConstructor
 @Getter
+@Setter
 public class Order {
     private final UUID orderId;
     private final Email email;
@@ -18,19 +20,4 @@ public class Order {
     private OrderStatus orderStatus;
     private final LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-
-    public void setAddress(String address) {
-        this.address = address;
-        this.updatedAt = LocalDateTime.now();
-    }
-
-    public void setPostcode(String postcode) {
-        this.postcode = postcode;
-        this.updatedAt = LocalDateTime.now();
-    }
-
-    public void setOrderStatus(OrderStatus orderStatus) {
-        this.orderStatus = orderStatus;
-        this.updatedAt = LocalDateTime.now();
-    }
 }
